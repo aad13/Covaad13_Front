@@ -1,0 +1,11 @@
+<h2 class="text-center text-success"><strong>Connexion</strong></h2>
+<br/>
+<div class="w-25 container text-left">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">E-mail </label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
+    </div>
+    <button type="submit" class="btn btn-success container text-center">Login</button>
+  </form>
+</div>
