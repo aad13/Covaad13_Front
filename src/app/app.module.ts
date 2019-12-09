@@ -8,15 +8,18 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {TripService} from './service/trip.service';
 import {UserService} from './service/user.service';
+import { SeeComponent } from './see/see.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent}
+  { path: '', component: HomeComponent},
+  { path: 'trips/:id', component: SeeComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SeeComponent
   ],
   imports: [
     BrowserModule,

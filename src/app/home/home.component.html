@@ -8,7 +8,8 @@
       <td class="text-success"><strong>{{trip.departureT}}</strong></td>
       <td class="text-success"><strong>{{trip.departureS}}</strong></td>
       <td class="text-success"><strong>{{trip.arrivalS}}</strong></td>
-      <td><button (click)="getTrip(trip.id)" [routerLink]="[trip.id]" class="btn btn-outline-success">Voir</button>
+      <td class="text-success"><strong>{{trip.price}}€</strong></td>
+      <td><button (click)="seeTrip(trip.id)" [routerLink]="[trip.id]" class="btn btn-outline-success">Voir</button>
       </td>
     </tr>
     </tbody>

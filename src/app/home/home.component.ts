@@ -12,9 +12,7 @@ import {Observable} from 'rxjs';
 export class HomeComponent implements OnInit {
 
   trips: Observable<Trip[]>;
-  constructor(private tripService: TripService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private tripService: TripService, private router: Router) { }
 
   ngOnInit() {
     this.reloadData();
@@ -24,10 +22,8 @@ export class HomeComponent implements OnInit {
     this.trips = this.tripService.getUnfinishedTrips();
   }
 
-  getTrip(id: number) {
-    this.tripService.getTrip(id).subscribe(
-        data => { console.log(data); },
-        error => { console.log(error); });
+  seeTrip(id: number) {
+    this.router.navigate(['trips', id]);
   }
 
 }
