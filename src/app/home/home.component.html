@@ -1,0 +1,16 @@
+<h2 class="text-center text-success"><strong>Liste des trajets disponibles</strong></h2>
+<br/>
+<div class="panel-body">
+  <table class="table table-striped">
+    <tbody>
+    <tr class="list" *ngFor="let trip of trips | async">
+      <td class="text-success"><strong>{{trip.owner.firstName}}</strong></td>
+      <td class="text-success"><strong>{{trip.departureT}}</strong></td>
+      <td class="text-success"><strong>{{trip.departureS}}</strong></td>
+      <td class="text-success"><strong>{{trip.arrivalS}}</strong></td>
+      <td><button (click)="getTrip(trip.id)" [routerLink]="[trip.id]" class="btn btn-outline-success">Voir</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
